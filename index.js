@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.post("/user/signup", (req, res) => {
-  res.json({ message: "signed up" });
+  res.json({ message: "signed up done" });
 });
 
 app.post("/user/login", (req, res) => {
