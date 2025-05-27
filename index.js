@@ -7,7 +7,7 @@ app.post("/user/signup", (req, res) => {
 });
 
 app.post("/user/login", (req, res) => {
-  res.json({ message: "logged in" });
+  res.json({ message: "logged in done" });
 });
 
 app.post("/user/purchease", (req, res) => {
