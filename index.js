@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const mongoDbURL = process.env.MongoDBConnectionString;
 const { userRouter } = require("./routes/user");
 const { adminRouter } = require("./routes/admin");
 const { courseRouter } = require("./routes/course");
@@ -11,9 +12,7 @@ app.use("/courses", courseRouter);
 app.use("/admin", adminRouter);
 
 async function main() {
-  await mongoose.connect(
-    "mongodb+srv://mmcharchi2002:Manas1%40charchi@cluster0.ezl2brj.mongodb.net/course-selling-app"
-  );
+  await mongoose.connect(mongoDbURL);
   console.log("db connected");
 
   app.listen(3000, () => {
