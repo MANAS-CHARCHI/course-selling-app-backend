@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const mongoDbURL = process.env.MongoDBConnectionString;
+require("dotenv").config();
+const mongoDbURL = process.env.MONGO_URI;
 const { userRouter } = require("./routes/user");
 const { adminRouter } = require("./routes/admin");
 const { courseRouter } = require("./routes/course");
