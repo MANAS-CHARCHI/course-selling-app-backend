@@ -7,7 +7,7 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   firstname: String,
   lastname: String,
-  isAdmin: { type: Boolean, default: false },
+  isAdmin: { type: Boolean, default: false, required: false },
 });
 
 const courseSchema = new Schema({
